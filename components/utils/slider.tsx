@@ -57,8 +57,8 @@ const Slider = () => {
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="mySwiper"
       >
-        {testimoniData?.map((e) => (
-          <SwiperSlide>
+        {testimoniData?.map((e, i) => (
+          <SwiperSlide key={i}>
             <Image src={`/images/${e}`} width={500} height={500} alt="" />
           </SwiperSlide>
         ))}

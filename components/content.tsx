@@ -72,7 +72,10 @@ const Content = () => {
         <div className="w-full flex justify-center relative">
           <div className="flex flex-wrap  w-11/12 justify-between gap-5 ">
             {layananData.map((e) => (
-              <Card className="w-44 md:w-72 h-72 md:h-96 relative">
+              <Card
+                key={e?.name}
+                className="w-44 md:w-72 h-72 md:h-96 relative"
+              >
                 <img
                   key={e?.name}
                   src={e.img}
