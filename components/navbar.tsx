@@ -1,0 +1,116 @@
+"use client"
+
+import Link from "next/link"
+import { useState, useEffect } from "react"
+import Image from "next/image"
+
+const MainNav = () => {
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 767.98
+  const [scrolling, setScrolling] = useState(false)
+
+  // handle fixed navbar dekstop
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      const scrollThreshold = 50
+      setScrolling(scrollPosition > scrollThreshold)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
+  // handle navbar on click
+  useEffect(() => {
+    const scrollLinks = document.querySelectorAll(".scroll-link")
+
+    scrollLinks.forEach((scrollLink: any) => {
+      scrollLink.addEventListener("click", scrollToSection)
+
+      return () => {
+        scrollLink.removeEventListener("click", scrollToSection)
+      }
+    })
+
+    function scrollToSection(e: any) {
+      e.preventDefault()
+      const targetId: any = e.target.getAttribute("href").substring(1)
+      const targetElement: any = document.getElementById(targetId)
+      targetElement.scrollIntoView({ behavior: "smooth" })
+    }
+  }, [])
+
+  useEffect(() => {
+    document
+      .getElementById("nav-beranda")
+      ?.addEventListener("click", function (e: any) {
+        e.preventDefault()
+        window.scrollTo({ top: 0, behavior: "smooth" })
+      })
+  }, [])
+
+  const nav = [
+    {
+      link: "Beranda",
+      href: null,
+    },
+    {
+      link: "Layanan",
+      href: "layanan",
+    },
+    {
+      link: "Tentang",
+      href: "tentang",
+    },
+    {
+      link: "Testimoni",
+      href: "testimoni",
+    },
+    {
+      link: "Kontak",
+      href: "kontak",
+    },
+  ]
+  return (
+    <nav
+      className={`flex z-20 space-x-6 px-5 items-center h-16 w-full text-slate-100 text-sm fixed ${
+        scrolling && "backdrop-blur-sm bg-[rgba(0,0,0,0.25)] shadow-xl "
+      } ${!scrolling && "text-slate-900"}
+      `}
+    >
+      <div>
+        <Image
+          src="/images/logo-navbar.png"
+          width={100}
+          height={200}
+          alt="logo navbar"
+        />
+      </div>
+      <ul className="flex space-x-6 capitalize pr-10 flex-row">
+        {nav.map((e) => (
+          <li
+            key={e.link}
+            className={`hover:text-orange-400 hover:underline transition-colors underline-offset-4 ${
+              scrolling && "hover:text-orange-400"
+            }`}
+          >
+            {e?.href ? (
+              <Link href={`#${e.href}`} className="scroll-link z-30">
+                {e.link}
+              </Link>
+            ) : (
+              <Link href={`#`} id="nav-beranda" className="z-30">
+                {e.link}
+              </Link>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
+
+export default MainNav
