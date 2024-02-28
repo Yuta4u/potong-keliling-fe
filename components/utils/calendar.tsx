@@ -21,8 +21,10 @@ function CalendarComp() {
 
   const handleTimeSelect = (time: any) => {
     const tgl = date.toString().split(" ")[2]
-    const jam = time
-    const msg = `Halo Mister Cukur, apakah untuk tanggal ${+tgl} jam ${jam} tersedia?`
+    const jam = time.split("")
+    jam[1] = jam[1] - 2
+    const modifiedJam = jam.join("")
+    const msg = `Halo Mister Cukur, apakah untuk tanggal ${+tgl} jam ${modifiedJam} tersedia?`
     const phoneNumber = "6285156269982" // Ganti dengan nomor yang diinginkan
     const messageText = encodeURIComponent(msg)
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${messageText}`
