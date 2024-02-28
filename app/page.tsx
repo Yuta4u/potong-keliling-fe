@@ -21,11 +21,7 @@ export default function Home() {
 
     // Initial check
     checkWindowSize()
-
-    // Listen for window resize events
     window.addEventListener("resize", checkWindowSize)
-
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("resize", checkWindowSize)
     }
