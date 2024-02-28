@@ -12,6 +12,7 @@ import { useEffect, useState } from "react"
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
 
   useEffect(() => {
     const checkWindowSize = () => {
@@ -31,7 +32,7 @@ export default function Home() {
   }, [])
   return (
     <main>
-      <Dialog />
+      <Dialog isOpen={isOpen} setIsOpen={setIsOpen} />
       {isMobile ? <HamburgerMenu /> : <MainNavbar />}
       <Banner />
       <Content />

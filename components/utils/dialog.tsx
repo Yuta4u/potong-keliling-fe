@@ -1,9 +1,7 @@
 import { useState } from "react"
 import Image from "next/image"
 
-const DialogWithBackgroundFocus = () => {
-  const [isOpen, setIsOpen] = useState(true)
-
+const DialogWithBackgroundFocus = ({ isOpen, setIsOpen }: any) => {
   const closeDialog = () => {
     setIsOpen(false)
   }
@@ -14,7 +12,7 @@ const DialogWithBackgroundFocus = () => {
         <div className="overlay">
           <div className="dialog">
             <button className="close-button" onClick={closeDialog}>
-              x
+              ✖
             </button>
             <Image
               src={"/images/warning-dialog.png"}
