@@ -14,7 +14,7 @@ const Footer = () => {
       <div className=" w-full flex justify-center mt-9">
         <div className="flex w-3/5  justify-center md:justify-between flex-wrap text-center">
           {footerData.map((e) => (
-            <a key={e} href="https://www.youtube.com/watch?v=Shm39XHEiuw">
+            <a key={e} href="https://www.google.com/">
               <div className="w-32 h-32">
                 <Image
                   className="logo-img"

@@ -21,9 +21,6 @@ export default function RootLayout({
       <body className="bg-slate-50" style={{ height: "1200px" }}>
         <Theme>
           <Content />
-          {/* <MainNavbar />
-          <Banner />
-          <Content /> */}
         </Theme>
       </body>
     </html>
