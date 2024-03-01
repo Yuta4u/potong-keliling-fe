@@ -44,7 +44,7 @@ const Content = () => {
   return (
     <div>
       {/*  BERANDA */}
-      <div id="beranda" className="content-1 h-10 md:h-28">
+      <div className="content-1 h-10 md:h-28">
         <div className=" text-center sm:text-sm md:text-3xl h-auto mt-7">
           Ingin buat janji dengan barber kami?
         </div>

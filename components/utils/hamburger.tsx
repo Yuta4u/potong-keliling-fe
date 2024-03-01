@@ -54,7 +54,7 @@ const HamburgerMenu = () => {
               className={`hover:text-orange-400 hover:underline transition-colors underline-offset-4 `}
             >
               {e?.href !== "beranda" ? (
-                <Link
+                <a
                   href={`#${e.href}`}
                   className="z-30 "
                   onClick={(event) => {
@@ -63,15 +63,15 @@ const HamburgerMenu = () => {
                   }}
                 >
                   {e.link}
-                </Link>
+                </a>
               ) : (
-                <Link
+                <a
                   href={`#`}
                   className="z-30 ml-6"
                   onClick={() => handleOnClick(e.href)}
                 >
                   {e.link}
-                </Link>
+                </a>
               )}
             </li>
           ))}
