@@ -57,7 +57,10 @@ const HamburgerMenu = () => {
                 <Link
                   href={`#${e.href}`}
                   className="z-30 "
-                  onClick={() => handleOnClick(e.href)}
+                  onClick={(event) => {
+                    event.preventDefault()
+                    handleOnClick(e.href)
+                  }}
                 >
                   {e.link}
                 </Link>
