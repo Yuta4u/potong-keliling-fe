@@ -28,7 +28,7 @@ const AlertDialogComp = ({ time, date }: any) => {
     const msg = `Halo Mister Cukur, apakah untuk tanggal ${+tgl} ${
       month[bln]
     }, jam ${time} tersedia?`
-    const phoneNumber = "6285156269982" // Ganti dengan nomor yang diinginkan
+    const phoneNumber = "6281292383814" // Ganti dengan nomor yang diinginkan
     const messageText = encodeURIComponent(msg)
     const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${messageText}`
     window.open(whatsappUrl, "_blank")
