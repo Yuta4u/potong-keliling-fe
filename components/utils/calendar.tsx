@@ -3,11 +3,72 @@
 import React, { useEffect, useState } from "react"
 import Calendar from "react-calendar"
 import "react-calendar/dist/Calendar.css"
+import { AlertDialog, Button, Flex } from "@radix-ui/themes"
+
+// handle calendar action
+const AlertDialogComp = ({ time, date }: any) => {
+  const handleTimeSelect = () => {
+    const month: any = {
+      Jan: "Januari",
+      Feb: "Februari",
+      Mar: "Maret",
+      Apr: "April",
+      May: "Mei",
+      Jun: "Juni",
+      Jul: "Juli",
+      Aug: "Agustus",
+      Sep: "September",
+      Oct: "Oktober",
+      Nov: "November",
+      Dec: "Desember",
+    }
+
+    const tgl = date.toString().split(" ")[2]
+    const bln = date.toString().split(" ")[1]
+    const msg = `Halo Mister Cukur, apakah untuk tanggal ${+tgl} ${
+      month[bln]
+    }, jam ${time} tersedia?`
+    const phoneNumber = "6285156269982" // Ganti dengan nomor yang diinginkan
+    const messageText = encodeURIComponent(msg)
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${messageText}`
+    window.open(whatsappUrl, "_blank")
+
+    if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+      window.location.href = whatsappUrl
+    }
+  }
+
+  return (
+    <AlertDialog.Root>
+      <AlertDialog.Trigger>
+        <Button className="btn-jam">{time}</Button>
+      </AlertDialog.Trigger>
+      <AlertDialog.Content style={{ maxWidth: 450 }}>
+        <AlertDialog.Title>Buat Janji?</AlertDialog.Title>
+        <AlertDialog.Description size="2">
+          Apakah kamu yakin ingin buat janji dengan Mister Cukur?
+        </AlertDialog.Description>
+
+        <Flex gap="3" mt="4" justify="end">
+          <AlertDialog.Cancel>
+            <Button variant="soft" color="gray">
+              Tidak
+            </Button>
+          </AlertDialog.Cancel>
+          <AlertDialog.Action>
+            <Button variant="soft" color="gray" onClick={handleTimeSelect}>
+              Iya
+            </Button>
+          </AlertDialog.Action>
+        </Flex>
+      </AlertDialog.Content>
+    </AlertDialog.Root>
+  )
+}
 
 function CalendarComp() {
   const [date, setDate] = useState(new Date())
   const [showTimePicker, setShowTimePicker] = useState(false)
-  const [selectedTime, setSelectedTime] = useState(null)
 
   // handle today
   const tempToday = new Date()
@@ -19,18 +80,6 @@ function CalendarComp() {
     setShowTimePicker(true) // Menampilkan pop-over jam saat tanggal diubah
   }
 
-  const handleTimeSelect = (time: any) => {
-    const tgl = date.toString().split(" ")[2]
-    const jam = time.split("")
-    jam[1] = jam[1] - 2
-    const modifiedJam = jam.join("")
-    const msg = `Halo Mister Cukur, apakah untuk tanggal ${+tgl} jam ${modifiedJam} tersedia?`
-    const phoneNumber = "6285156269982" // Ganti dengan nomor yang diinginkan
-    const messageText = encodeURIComponent(msg)
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${messageText}`
-    window.open(whatsappUrl, "_blank")
-  }
-
   return (
     <div className="flex">
       <Calendar
@@ -40,32 +89,37 @@ function CalendarComp() {
         minDate={today}
       />
       {showTimePicker && (
-        <div
-          className="time-picker w-32"
-          style={{
-            border: "2px solid #d0433a",
-            backgroundColor: "rgba(0, 0, 0, 0.6)",
-            color: "#fff",
-          }}
-        >
-          <p>Select time:</p>
-          <select
-            onChange={(e) => handleTimeSelect(e.target.value)}
-            style={{ backgroundColor: "#1b4552", borderRadius: "5px" }}
+        <div className="time-picker">
+          <div>Waktu Tersedia</div>
+          <hr className="mt-1" />
+          <div
+            className="flex justify-between mx-auto font-semibold mt-1"
+            style={{ width: "80%" }}
           >
-            <option value="09:00">09:00</option>
-            <option value="12:00">10:00</option>
-            <option value="15:00">11:00</option>
-            <option value="18:00">12:00</option>
-            <option value="09:00">13:00</option>
-            <option value="12:00">14:00</option>
-            <option value="15:00">15:00</option>
-            <option value="18:00">16:00</option>
-            <option value="09:00">17:00</option>
-            <option value="12:00">18:00</option>
-            <option value="15:00">19:00</option>
-            <option value="18:00">20:00</option>
-          </select>
+            <div>Morning</div>
+            <div>Afternoon</div>
+            <div>Evening</div>
+          </div>
+          <div className="h-40 mt-2 md:mt-0 mx-auto flex justify-between gap-2 p-0 md:p-2">
+            <div className="w-1/3 flex flex-col justify-between">
+              <AlertDialogComp time={"08:00"} date={date} />
+              <AlertDialogComp time={"09:00"} date={date} />
+              <AlertDialogComp time={"10:00"} date={date} />
+              <AlertDialogComp time={"11:00"} date={date} />
+            </div>
+            <div className="w-1/3 flex flex-col justify-between">
+              <AlertDialogComp time={"12:00"} date={date} />
+              <AlertDialogComp time={"13:00"} date={date} />
+              <AlertDialogComp time={"14:00"} date={date} />
+              <AlertDialogComp time={"15:00"} date={date} />
+            </div>
+            <div className="w-1/3 flex flex-col justify-between">
+              <AlertDialogComp time={"16:00"} date={date} />
+              <AlertDialogComp time={"17:00"} date={date} />
+              <AlertDialogComp time={"18:00"} date={date} />
+              <AlertDialogComp time={"19:00"} date={date} />
+            </div>
+          </div>
         </div>
       )}
     </div>
