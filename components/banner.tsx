@@ -40,8 +40,8 @@ const Banner = () => {
           onAutoplayTimeLeft={onAutoplayTimeLeft}
           className="mySwiper"
         >
-          {banner?.map((e: number) => (
-            <SwiperSlide>
+          {banner?.map((e: number, i: number) => (
+            <SwiperSlide key={i}>
               {/* <img src={"/images/banner-1.jpg"} /> */}
               <Image
                 src={`/images/banner-1.jpg`}
