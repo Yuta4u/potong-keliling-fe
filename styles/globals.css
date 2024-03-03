@@ -328,7 +328,7 @@ abbr[title] {
 .dialog {
   position: relative;
   display: block;
-  background: white;
+  background: #fdfdfd;
   width: 30%;
   height: 90vh;
   padding: 20px;
@@ -348,10 +348,16 @@ abbr[title] {
   align-items: center;
   padding: 20px;
   border-radius: 50%;
-  background-color: #d74a49;
   font-size: 20px;
-  color: white;
+  color: black !important;
   margin-bottom: 5px;
+}
+
+.close-dialog {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
 }
 
 @media (max-width: 768px) {

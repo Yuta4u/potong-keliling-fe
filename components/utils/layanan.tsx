@@ -44,8 +44,11 @@ const Layanan = () => {
           <br />
           (Add on)
         </div>
-        {str.map((e) => (
-          <div className="flex text-[#FA6709]  w-10/12 md:w-4/12 mx-auto">
+        {str.map((e, key) => (
+          <div
+            key={key}
+            className="flex text-[#FA6709]  w-10/12 md:w-4/12 mx-auto"
+          >
             <div className={`w-10/12 md:w-6/12`}>{e}</div>
             <div
               className={`border-b-2 w-4/12 border-b-[#FA6709] border-dashed mb-3`}

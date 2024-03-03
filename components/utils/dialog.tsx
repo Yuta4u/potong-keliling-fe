@@ -1,5 +1,5 @@
-import { useState } from "react"
 import Image from "next/image"
+import { Cross1Icon } from "@radix-ui/react-icons"
 
 const DialogWithBackgroundFocus = ({ isOpen, setIsOpen }: any) => {
   const closeDialog = () => {
@@ -11,13 +11,13 @@ const DialogWithBackgroundFocus = ({ isOpen, setIsOpen }: any) => {
       {isOpen && (
         <div className="overlay">
           <div className="dialog">
-            <button className="close-button" onClick={closeDialog}>
-              ✖
+            <button className="close-dialog" onClick={closeDialog}>
+              <Cross1Icon className="w-4 h-4" />
             </button>
             <Image
-              src={"/images/warning-dialog.png"}
-              width={100}
-              height={100}
+              src={"/images/warning-img.png"}
+              width={2000}
+              height={2000}
               style={{ width: "100%", height: "100%" }}
               alt="dialog"
             />
