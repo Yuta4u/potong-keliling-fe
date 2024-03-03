@@ -17,7 +17,7 @@ const WhatsappBtn = () => {
       <Button
         color="grass"
         variant="solid"
-        className="w-36"
+        className="w-36 hover:text-slate-700"
         onClick={handleOnClickWhatsapp}
       >
         <RocketIcon width="16" height="16" />

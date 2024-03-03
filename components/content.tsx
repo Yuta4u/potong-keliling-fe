@@ -48,7 +48,7 @@ const Content = () => {
           <div>or</div>
           <WhatsappBtn />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center pt-11">
           <hr
             className="hr border-t-1  my-4 w-1/2"
             style={{ borderColor: "#74642e" }}
@@ -56,7 +56,7 @@ const Content = () => {
         </div>
       </div>
       {/* LAYANAN */}
-      <div id="layanan" className="pt-0 md:pt-20">
+      <div id="layanan" className="pt-0 md:pt-40 mb-20">
         <div className="w-full flex justify-center">
           <div
             className="w-11/12 text-sm md:text-2xl flex items-center mb-3"
@@ -87,22 +87,12 @@ const Content = () => {
           </div>
         </div>
       </div>
+
       {/* TENTANG */}
-      <div
-        id="tentang"
-        className=" h-80  pt-20 flex flex-column justify-center"
-      >
-        <div className="flex flex-wrap w-4/5 justify-center text-center">
-          <div className="flex justify-center  w-full">
-            <hr
-              className="border-t-1 my-4 w-1/2"
-              style={{ borderColor: "#74642e" }}
-            />
-          </div>
-          <div className="font-bold text-2xl mt-3" style={{ color: "#777777" }}>
-            Tentang Kami
-          </div>
-          <div style={{ color: "#777777" }}>
+      <div id="tentang" className=" h-auto flex flex-column justify-center">
+        <div className="flex flex-col py-20 justify-center text-center bg-[#FA6709] text-[#ededed]">
+          <div className="font-bold text-2xl mt-3 ">Tentang Kami</div>
+          <div className="w-4/5 mx-auto mt-2">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti,
             perspiciatis cum. Fugiat totam saepe quod porro odio aliquam at
             ipsum consequatur, perferendis nulla sunt id earum, praesentium,
@@ -117,7 +107,7 @@ const Content = () => {
         </div>
       </div>
       {/*  TESTIMONI */}
-      <div id="testimoni" className="pt-72 md:pt-20">
+      <div id="testimoni" className="pt-20 md:pt-20">
         <div
           className="w-full flex justify-center"
           style={{ color: "#777777" }}
@@ -135,7 +125,7 @@ const Content = () => {
       {/*  KONTAK */}
       <div
         id="kontak"
-        className="pt-20 mt-5 md:mt-0 pb-12 flex flex-column justify-center"
+        className="pt-20 mt-5 md:mt-0 flex flex-column justify-center"
       >
         <Footer />
       </div>

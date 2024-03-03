@@ -4,7 +4,6 @@
 
 #beranda {
   height: 550px;
-  padding-top: 70px;
 }
 
 .hr {
@@ -64,7 +63,7 @@
 }
 
 .swiper-pagination-bullet {
-  background: white !important;
+  background: rgb(255, 0, 0) !important;
   /* color: red; */
 }
 
@@ -96,6 +95,7 @@
 }
 
 /* CALENDAR  */
+
 .react-calendar {
   width: 400px;
   max-width: 100%;
@@ -110,17 +110,6 @@
 .react-calendar button {
   font-size: 12px;
   font-weight: bold;
-}
-
-.react-calendar__tile {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  height: 50px;
-  background: #ffffff;
-  color: #dddddd;
-  padding: 5px !important;
-  border: 0.2px solid #dcdcdc !important;
 }
 
 .react-calendar__tile:disabled {
@@ -153,12 +142,16 @@
   color: black !important;
 }
 
+.react-calendar-tile:disabled:hover {
+  color: #ababab !important;
+}
+
 .react-calendar__navigation {
   margin: 5px;
 }
 
 /* REMOVE PREV BTN  */
-.react-calendar__navigation__prev2-button,
+
 .react-calendar__navigation__next-button {
   background-color: #76818d !important;
   border-top-left-radius: 3px !important;
@@ -167,8 +160,12 @@
   font-size: 2rem;
 }
 
-.react-calendar__navigation__prev-button,
+.react-calendar__navigation__prev2-button,
 .react-calendar__navigation__next2-button {
+  display: none;
+}
+
+.react-calendar__navigation__prev-button {
   background-color: #76818d !important;
   border-top-right-radius: 3px !important;
   border-bottom-right-radius: 3px !important;
@@ -189,6 +186,7 @@
 
 abbr[title] {
   text-decoration: none;
+  color: black !important;
 }
 
 .react-calendar__tile:enabled:hover,
@@ -238,11 +236,20 @@ abbr[title] {
   background: #fee0c8;
   color: white;
 }
-.react-calendar__tile--rangeEnd {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  background: #fee0c8;
-  color: white;
+
+.react-calendar__tile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 50px;
+  background: #ffffff;
+  color: #dddddd;
+  padding: 5px !important;
+  border: 0.2px solid #dcdcdc !important;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #dddddd !important;
 }
 
 .time-picker {

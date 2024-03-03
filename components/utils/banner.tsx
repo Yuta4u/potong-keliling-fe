@@ -9,8 +9,7 @@ import "swiper/css/navigation"
 import "../../styles/banner.css"
 
 // import required modules
-import { Pagination } from "swiper/modules"
-import { Autoplay } from "swiper/modules"
+import { Pagination, Autoplay, Navigation } from "swiper/modules"
 
 import Image from "next/image"
 
@@ -23,10 +22,11 @@ const Banner = () => {
   const banner = [1, 2, 3]
   return (
     <div id="beranda" className="flex justify-center">
-      <div className="w-full md:w-11/12 ">
+      <div className="w-full">
         <Swiper
           slidesPerView={1}
           spaceBetween={30}
+          navigation={true}
           autoplay={{
             delay: 10000,
             disableOnInteraction: false,
@@ -35,7 +35,7 @@ const Banner = () => {
           pagination={{
             clickable: true,
           }}
-          modules={[Pagination, Autoplay]}
+          modules={[Pagination, Autoplay, Navigation]}
           onAutoplayTimeLeft={onAutoplayTimeLeft}
           className="mySwiper"
         >
@@ -43,7 +43,7 @@ const Banner = () => {
             <SwiperSlide key={i}>
               {/* <img src={"/images/banner-1.jpg"} /> */}
               <Image
-                src={`/images/banner-1.jpg`}
+                src={`/images/banner-img-1.png`}
                 width={2000}
                 height={2000}
                 objectFit="cover"

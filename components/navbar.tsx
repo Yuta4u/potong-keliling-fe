@@ -76,26 +76,26 @@ const MainNav = () => {
   ]
   return (
     <nav
-      className={`flex z-20 space-x-6 px-5 items-center h-16 w-full  text-sm fixed ${
+      className={`flex justify-center z-20 space-x-6 px-5 items-center h-16 w-full  text-sm fixed ${
         scrolling && "backdrop-blur-sm bg-[rgba(0,0,0,0.8)] shadow-xl "
       } ${!scrolling && "text-slate-500"}
       `}
       style={{ color: "#777777" }}
     >
-      <div>
+      {/* <div>
         <Image
           src="/images/logo-navbar.png"
           width={100}
           height={200}
           alt="logo navbar"
         />
-      </div>
+      </div> */}
       <ul className="flex space-x-6 capitalize pr-10 flex-row">
         {nav.map((e) => (
           <li
             key={e.link}
-            className={`hover:text-orange-400 hover:underline transition-colors underline-offset-4 ${
-              scrolling && "hover:text-orange-400"
+            className={`px-4 py-1 bg-[#FA6709] text-[#ededed] rounded-md hover:text-slate-800 transition-colors underline-offset-4 ${
+              scrolling && "bg-transparent hover:text-zinc-400"
             }`}
           >
             {e?.href ? (

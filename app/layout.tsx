@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+        className="bg-late-50"
         style={{
           height: "1200px",
-          backgroundColor: "#000000",
         }}
       >
         <Theme>
