@@ -76,10 +76,11 @@ const MainNav = () => {
   ]
   return (
     <nav
-      className={`flex z-20 space-x-6 px-5 items-center h-16 w-full text-slate-100 text-sm fixed ${
-        scrolling && "backdrop-blur-sm bg-[rgba(0,0,0,0.25)] shadow-xl "
-      } ${!scrolling && "text-slate-900"}
+      className={`flex z-20 space-x-6 px-5 items-center h-16 w-full  text-sm fixed ${
+        scrolling && "backdrop-blur-sm bg-[rgba(0,0,0,0.8)] shadow-xl "
+      } ${!scrolling && "text-slate-500"}
       `}
+      style={{ color: "#777777" }}
     >
       <div>
         <Image

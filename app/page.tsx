@@ -4,7 +4,7 @@ import dynamic from "next/dynamic"
 
 const MainNavbar = dynamic(() => import("../components/navbar"))
 const HamburgerMenu = dynamic(() => import("../components/utils/hamburger"))
-const Banner = dynamic(() => import("../components/banner"))
+const Banner = dynamic(() => import("../components/utils/banner"))
 const Content = dynamic(() => import("../components/content"))
 const Dialog = dynamic(() => import("../components/utils/dialog"))
 

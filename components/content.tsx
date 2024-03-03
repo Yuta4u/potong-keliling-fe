@@ -7,17 +7,9 @@ import Footer from "./footer"
 import Slider from "./utils/slider"
 import PopoverButton from "./utils/popover"
 import CalendarComp from "./utils/calendar"
-
-// others
-import { useEffect, useState } from "react"
+import WhatsappBtn from "./utils/whatsapp"
 
 const Content = () => {
-  const [value, onChange] = useState(new Date())
-
-  useEffect(() => {
-    console.log(value)
-  }, [value])
-
   const layananData = [
     {
       name: "Yang Penting Rapih",
@@ -44,28 +36,32 @@ const Content = () => {
   return (
     <div>
       {/*  BERANDA */}
-      <div className="content-1 h-10 md:h-28">
-        <div className=" text-center sm:text-sm md:text-3xl h-auto mt-7">
+      <div className="content-1 h-10 md:h-28 mb-32 md:mb-0">
+        <div
+          className=" text-center sm:text-sm md:text-3xl h-auto mt-7 "
+          style={{ color: "#777777" }}
+        >
           Ingin buat janji dengan barber kami?
         </div>
-        <div className="text-center mt-3">
+        <div className="text-center mt-3 flex justify-center flex-col">
           <PopoverButton content={<CalendarComp />} />
-          {/* <Button
-            className="bg-zinc-200 text-black"
-            onClick={() => alert("develop")}
-          >
-            <CalendarIcon className="mr-2 h-4 w-4" />
-            Schedule
-          </Button> */}
+          <div>or</div>
+          <WhatsappBtn />
         </div>
         <div className="flex justify-center">
-          <hr className="border-t-1 border-gray-300 my-4 w-1/2" />
+          <hr
+            className="hr border-t-1  my-4 w-1/2"
+            style={{ borderColor: "#74642e" }}
+          />
         </div>
       </div>
       {/* LAYANAN */}
-      <div id="layanan" className="pt-20">
+      <div id="layanan" className="pt-0 md:pt-20">
         <div className="w-full flex justify-center">
-          <div className="w-11/12 text-sm md:text-2xl flex items-center mb-3">
+          <div
+            className="w-11/12 text-sm md:text-2xl flex items-center mb-3"
+            style={{ color: "#777777" }}
+          >
             Layanan <ScissorsIcon className="ml-2 h-4 w-4 md:h-6 md:w-6" />
           </div>
         </div>
@@ -98,10 +94,15 @@ const Content = () => {
       >
         <div className="flex flex-wrap w-4/5 justify-center text-center">
           <div className="flex justify-center  w-full">
-            <hr className="border-t-1 border-gray-300 my-4 w-1/2" />
+            <hr
+              className="border-t-1 my-4 w-1/2"
+              style={{ borderColor: "#74642e" }}
+            />
           </div>
-          <div className="font-bold text-2xl mt-3">Tentang Kami</div>
-          <div>
+          <div className="font-bold text-2xl mt-3" style={{ color: "#777777" }}>
+            Tentang Kami
+          </div>
+          <div style={{ color: "#777777" }}>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti,
             perspiciatis cum. Fugiat totam saepe quod porro odio aliquam at
             ipsum consequatur, perferendis nulla sunt id earum, praesentium,
@@ -117,7 +118,10 @@ const Content = () => {
       </div>
       {/*  TESTIMONI */}
       <div id="testimoni" className="pt-72 md:pt-20">
-        <div className="w-full flex justify-center">
+        <div
+          className="w-full flex justify-center"
+          style={{ color: "#777777" }}
+        >
           <div className="w-11/12 text-sm md:text-2xl flex items-center mb-3">
             Testimoni <DrawingPinIcon className="ml-2 h-4 w-4 md:h-6 md:w-6" />
           </div>

@@ -87,11 +87,12 @@ function CalendarComp() {
         onChange={handleDateChange}
         value={date}
         minDate={today}
+        view="month"
       />
       {showTimePicker && (
         <div className="time-picker">
           <div>Waktu Tersedia</div>
-          <hr className="mt-1" />
+          <hr className="mt-1 hr" style={{ borderColor: "#74642e" }} />
           <div
             className="flex justify-between mx-auto font-semibold mt-1"
             style={{ width: "80%" }}

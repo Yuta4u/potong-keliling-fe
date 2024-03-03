@@ -1,8 +1,7 @@
 "use client"
 
 import { Sling as Hamburger } from "hamburger-react"
-import Link from "next/link"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
 const HamburgerMenu = () => {
   const [isOpen, setOpen] = useState(false)

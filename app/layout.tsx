@@ -18,7 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-slate-50" style={{ height: "1200px" }}>
+      <body
+        style={{
+          height: "1200px",
+          backgroundColor: "#000000",
+        }}
+      >
         <Theme>
           <Content />
         </Theme>
