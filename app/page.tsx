@@ -28,7 +28,7 @@ export default function Home() {
   }, [])
   return (
     <main>
-      <Dialog isOpen={isOpen} setIsOpen={setIsOpen} />
+      {/* <Dialog isOpen={isOpen} setIsOpen={setIsOpen} /> */}
       {isMobile ? <HamburgerMenu /> : <MainNavbar />}
       <Banner />
       <Content />

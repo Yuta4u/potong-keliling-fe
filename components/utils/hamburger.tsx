@@ -11,13 +11,14 @@ const HamburgerMenu = () => {
       href: "beranda",
     },
     {
-      link: "Layanan",
-      href: "layanan",
-    },
-    {
       link: "Tentang",
       href: "tentang",
     },
+    {
+      link: "Layanan",
+      href: "layanan",
+    },
+
     {
       link: "Testimoni",
       href: "testimoni",

@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
             <div className="  flex align-middle">
               <div className="w-2/12 md:w-1/12  flex justify-center ">
-                <img src={"/images/whatsapp-icon.png"} />
+                {/* <img src={"/images/whatsapp-icon.png"} /> */}
               </div>
               <div
                 className="font-semibold text-lg flex"
@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
             <div className="  flex align-middle">
               <div className="w-2/12 md:w-1/12   flex justify-center">
-                <img src={"/images/location-icon.png"} />
+                {/* <img src={"/images/location-icon.png"} /> */}
               </div>
               <div
                 className="font-semibold text-lg flex"
@@ -59,7 +59,7 @@ const Footer = () => {
             </div>
             <div className="  flex align-middle">
               <div className="w-2/12 md:w-1/12   flex justify-center">
-                <img src={"/images/clock-icon.png"} />
+                {/* <img src={"/images/clock-icon.png"} /> */}
               </div>
               <div
                 className="font-semibold text-lg flex"

@@ -5,6 +5,8 @@ import { Card } from "@radix-ui/themes"
 // components
 import Footer from "./footer"
 import Slider from "./utils/slider"
+import Tentang from "./utils/tentang"
+import Layanan from "./utils/layanan"
 import PopoverButton from "./utils/popover"
 import CalendarComp from "./utils/calendar"
 import WhatsappBtn from "./utils/whatsapp"
@@ -35,83 +37,33 @@ const Content = () => {
 
   return (
     <div>
-      {/*  BERANDA */}
-      <div className="content-1 h-10 md:h-28 mb-32 md:mb-0">
-        <div
-          className=" text-center sm:text-sm md:text-3xl h-auto mt-7 "
-          style={{ color: "#777777" }}
-        >
+      {/* TENTANG  */}
+      <Tentang />
+
+      {/* BUAT JANJI  */}
+      <div
+        className="content-1 mb-32 md:mb-0 bg-[rgba(0,0,0,0.8)] text-[#ededed] flex flex-col justify-center h-60"
+        style={{ alignItems: "center" }}
+      >
+        <div className="text-center text-sm  md:text-lg font-medium">
           Ingin buat janji dengan barber kami?
         </div>
         <div className="text-center mt-3 flex justify-center flex-col">
           <PopoverButton content={<CalendarComp />} />
-          <div>or</div>
+          <div className="text-sm  md:text-lg ">or</div>
           <WhatsappBtn />
-        </div>
-        <div className="flex justify-center pt-11">
-          <hr
-            className="hr border-t-1  my-4 w-1/2"
-            style={{ borderColor: "#74642e" }}
-          />
-        </div>
-      </div>
-      {/* LAYANAN */}
-      <div id="layanan" className="pt-0 md:pt-40 mb-20">
-        <div className="w-full flex justify-center">
-          <div
-            className="w-11/12 text-sm md:text-2xl flex items-center mb-3"
-            style={{ color: "#777777" }}
-          >
-            Layanan <ScissorsIcon className="ml-2 h-4 w-4 md:h-6 md:w-6" />
-          </div>
-        </div>
-        <div className="w-full flex justify-center relative">
-          <div className="flex flex-wrap  w-11/12 justify-between gap-5 ">
-            {layananData.map((e) => (
-              <Card
-                key={e?.name}
-                className="w-44 md:w-72 h-72 md:h-96 relative"
-              >
-                <img
-                  key={e?.name}
-                  src={e.img}
-                  style={{ width: "100%", height: "85%" }}
-                  alt="img"
-                />
-                <div>{e.name}</div>
-                <div className="flex justify-end">
-                  <div className="price w-1/3">{e.price}</div>
-                </div>
-              </Card>
-            ))}
-          </div>
         </div>
       </div>
 
-      {/* TENTANG */}
-      <div id="tentang" className=" h-auto flex flex-column justify-center">
-        <div className="flex flex-col py-20 justify-center text-center bg-[#FA6709] text-[#ededed]">
-          <div className="font-bold text-2xl mt-3 ">Tentang Kami</div>
-          <div className="w-4/5 mx-auto mt-2">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti,
-            perspiciatis cum. Fugiat totam saepe quod porro odio aliquam at
-            ipsum consequatur, perferendis nulla sunt id earum, praesentium,
-            natus reprehenderit. Doloremque! Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. Deleniti, perspiciatis cum. Fugiat
-            totam saepe quod porro odio aliquam at ipsum consequatur,
-            perferendis nulla sunt id earum, praesentium, natus reprehenderit.
-            Doloremque! Lorem ipsum dolor sit, amet consectetur adipisicing
-            elit. Deleniti, perspiciatis cum. Fugiat totam saepe quod porro odio
-            aliquam at ipsum consequatur, perferendis nulla sunt id earum,
-          </div>
-        </div>
-      </div>
+      {/* LAYANAN */}
+      <Layanan />
+
       {/*  TESTIMONI */}
-      <div id="testimoni" className="pt-20 md:pt-20">
-        <div
-          className="w-full flex justify-center"
-          style={{ color: "#777777" }}
-        >
+      <div
+        id="testimoni"
+        className=" bg-[rgba(0,0,0,0.8)] text-[#ededed] py-20 "
+      >
+        <div className="w-full flex justify-center">
           <div className="w-11/12 text-sm md:text-2xl flex items-center mb-3">
             Testimoni <DrawingPinIcon className="ml-2 h-4 w-4 md:h-6 md:w-6" />
           </div>
@@ -123,10 +75,7 @@ const Content = () => {
         </div>
       </div>
       {/*  KONTAK */}
-      <div
-        id="kontak"
-        className="pt-20 mt-5 md:mt-0 flex flex-column justify-center"
-      >
+      <div id="kontak" className="flex flex-column justify-center">
         <Footer />
       </div>
     </div>

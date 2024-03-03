@@ -47,19 +47,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
+}
+
+.swiper-slide-testimoni {
+  border: 3px solid #fa6709;
 }
 
 .swiper-slide-testimoni img {
-  height: 200px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   border-radius: 15px;
-  transition: transform 0.3s ease, border-radius 0.3s ease;
 }
 
-.swiper-slide-testimoni img:hover {
-  transform: scale(1.05);
+.swiper-slide-testimoni:hover {
+  transform: scale(1.03);
   cursor: grab;
-  border-radius: 20px;
+  border: 5px solid #fa6709;
+  box-shadow: #4caf50;
 }
 
 .swiper-pagination-bullet {

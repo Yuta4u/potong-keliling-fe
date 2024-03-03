@@ -58,13 +58,14 @@ const MainNav = () => {
       href: null,
     },
     {
-      link: "Layanan",
-      href: "layanan",
-    },
-    {
       link: "Tentang",
       href: "tentang",
     },
+    {
+      link: "Layanan",
+      href: "layanan",
+    },
+
     {
       link: "Testimoni",
       href: "testimoni",
@@ -95,7 +96,7 @@ const MainNav = () => {
           <li
             key={e.link}
             className={`px-4 py-1 bg-[#FA6709] text-[#ededed] rounded-md hover:text-slate-800 transition-colors underline-offset-4 ${
-              scrolling && "bg-transparent hover:text-zinc-400"
+              scrolling && "bg-transparent hover:text-[#FA6709]"
             }`}
           >
             {e?.href ? (
