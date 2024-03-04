@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const Tentang = () => {
   return (
-    <div id="tentang" className="w-full py-0 pb-20 border-t-2 mt-20 md:py-10">
+    <div id="tentang" className="w-full py-0 pb-20 mt-20 md:py-10">
       <Image
         src={"/images/logo-text.png"}
         width={300}

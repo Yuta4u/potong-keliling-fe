@@ -19,7 +19,7 @@ const Banner = () => {
     progressCircle.current?.style.setProperty("--progress", 1 - progress)
   }
 
-  const banner = [1, 2, 3]
+  const banner = [1, 2]
   return (
     <div id="beranda" className="flex justify-center">
       <div className="w-full">
@@ -41,11 +41,10 @@ const Banner = () => {
         >
           {banner?.map((e: number, i: number) => (
             <SwiperSlide key={i}>
-              {/* <img src={"/images/banner-1.jpg"} /> */}
               <Image
-                src={`/images/banner-img-${1}.png`}
-                width={2000}
-                height={2000}
+                src={`/images/slider-${e}.png`}
+                width={1000}
+                height={1000}
                 objectFit="cover"
                 alt="banner"
               />

@@ -71,11 +71,7 @@ const MainNav = () => {
       href: "testimoni",
     },
     {
-      link: "Kontak",
-      href: "kontak",
-    },
-    {
-      link: "Punya Pertanyaan",
+      link: "Kontak Kami",
       href: "kontak",
     },
   ]
@@ -96,10 +92,18 @@ const MainNav = () => {
         />
       </div> */}
       <ul className="flex space-x-6 capitalize pr-10 flex-row">
+        <li className=" fixed -left-60 top-0 ">
+          <Image
+            src={"/images/navbar-logo.png"}
+            width={65}
+            height={65}
+            alt=""
+          />
+        </li>
         {nav.map((e) => (
           <li
             key={e.link}
-            className={`px-4 text-base py-1 bg-[#FA6709] text-[#ededed] rounded-md hover:text-slate-800 transition-colors underline-offset-4 ${
+            className={`px-4 text-base py-1 bg-[#FA6709] text-[#ededed] rounded-md hover:text-slate-500 transition-colors underline-offset-4 ${
               scrolling && "bg-transparent hover:text-[#FA6709]"
             }`}
           >

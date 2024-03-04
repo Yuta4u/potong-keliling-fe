@@ -69,8 +69,13 @@
 }
 
 .swiper-pagination-bullet {
-  background: rgb(255, 0, 0) !important;
+  background: #fa6709 !important;
   /* color: red; */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fa6709 !important;
 }
 
 .logo-img:hover {
@@ -356,8 +361,9 @@ abbr[title] {
 .close-dialog {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   margin: 10px;
+  font-weight: 800;
 }
 
 @media (max-width: 768px) {

@@ -14,10 +14,11 @@ function PopoverButton({ content }: any) {
       <PopoverTrigger>
         {/* <button className="popover-button">Cek Schedule</button> */}
         <Button
+          size={"4"}
           variant="solid"
-          className="w-36 bg-[#FA6709] text-[#ededed] hover:text-slate-600"
+          className="w-40 bg-[#FA6709] text-[#ededed] hover:text-slate-600"
         >
-          <CalendarIcon width="16" height="16" /> Schedule
+          <CalendarIcon className="w-6 h-6" /> Schedule
         </Button>
       </PopoverTrigger>
       <PopoverContent className="popover-content">{content}</PopoverContent>

@@ -15,9 +15,10 @@ const WhatsappBtn = () => {
   return (
     <div className="text-center">
       <Button
+        size="4"
         color="grass"
         variant="solid"
-        className="w-36 hover:text-slate-700"
+        className="w-40 hover:text-slate-700"
         onClick={handleOnClickWhatsapp}
       >
         <RocketIcon width="16" height="16" />
