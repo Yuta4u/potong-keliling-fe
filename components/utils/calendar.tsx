@@ -46,7 +46,8 @@ const AlertDialogComp = ({ time, date }: any) => {
       <AlertDialog.Content style={{ maxWidth: 450 }}>
         <AlertDialog.Title>Buat Janji?</AlertDialog.Title>
         <AlertDialog.Description size="2">
-          Apakah kamu yakin ingin buat janji dengan Mister Cukur?
+          Apakah kamu yakin ingin buat janji dengan{" "}
+          <span className="text-[#FA6709]">Mister Cukur</span>?
         </AlertDialog.Description>
 
         <Flex gap="3" mt="4" justify="end">
@@ -91,11 +92,11 @@ function CalendarComp() {
       />
       {showTimePicker && (
         <div className="time-picker">
-          <div>Waktu Tersedia</div>
+          <div className="text-black">Waktu Tersedia</div>
           <hr className="mt-1 hr" style={{ borderColor: "#74642e" }} />
           <div
             className="flex justify-between mx-auto font-semibold mt-1"
-            style={{ width: "80%" }}
+            style={{ width: "80%", color: "black" }}
           >
             <div>Morning</div>
             <div>Afternoon</div>

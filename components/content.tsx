@@ -42,11 +42,12 @@ const Content = () => {
 
       {/* BUAT JANJI  */}
       <div
-        className="content-1 mb-32 md:mb-0 bg-[rgba(0,0,0,0.8)] text-[#ededed] flex flex-col justify-center h-60"
+        className="content-1 mb-32 md:mb-0 bg-[#ededed] text-black flex flex-col justify-center h-60"
         style={{ alignItems: "center" }}
       >
         <div className="text-center text-sm  md:text-lg font-medium">
-          Ingin buat janji dengan barber kami?
+          Ingin buat janji dengan{" "}
+          <span className="text-[#FA6709]">Mister Cukur</span> ?
         </div>
         <div className="text-center mt-3 flex justify-center flex-col">
           <PopoverButton content={<CalendarComp />} />
@@ -59,10 +60,7 @@ const Content = () => {
       <Layanan />
 
       {/*  TESTIMONI */}
-      <div
-        id="testimoni"
-        className=" bg-[rgba(0,0,0,0.8)] text-[#ededed] py-20 "
-      >
+      <div id="testimoni" className=" bg-[#ededed] text-black py-20 ">
         <div className="w-full flex justify-center">
           <div className="w-11/12 text-sm md:text-2xl flex items-center mb-3">
             Testimoni <DrawingPinIcon className="ml-2 h-4 w-4 md:h-6 md:w-6" />

@@ -1,17 +1,10 @@
 "use client"
 
-import Image from "next/image"
-
 const Footer = () => {
-  const footerData = ["whatsapp", "instagram", "twitter", "facebook"]
-
   return (
-    <div className="flex flex-col w-full justify-center text-center bg-[#FA6709] text-[#ededed]">
+    <div className="flex flex-col w-full justify-center text-center bg-[#FA6709] text-[#ededed] py-10">
       <div className="font-bold text-2xl mt-3">Punya Pertanyaan?</div>
-      <div
-        className="flex flex-col md:flex-row w-4/5 mx-auto"
-        style={{ height: "400px" }}
-      >
+      <div className="flex flex-col md:flex-row w-4/5 mx-auto">
         <div className="w-full md:w-1/2 md:h-3/5 flex flex-col justify-between   mt-4 md:mt-0">
           {/* LOCATION  */}
           <div>

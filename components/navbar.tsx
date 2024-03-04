@@ -74,6 +74,10 @@ const MainNav = () => {
       link: "Kontak",
       href: "kontak",
     },
+    {
+      link: "Punya Pertanyaan",
+      href: "kontak",
+    },
   ]
   return (
     <nav
@@ -95,7 +99,7 @@ const MainNav = () => {
         {nav.map((e) => (
           <li
             key={e.link}
-            className={`px-4 py-1 bg-[#FA6709] text-[#ededed] rounded-md hover:text-slate-800 transition-colors underline-offset-4 ${
+            className={`px-4 text-base py-1 bg-[#FA6709] text-[#ededed] rounded-md hover:text-slate-800 transition-colors underline-offset-4 ${
               scrolling && "bg-transparent hover:text-[#FA6709]"
             }`}
           >

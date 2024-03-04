@@ -9,15 +9,15 @@ const DialogWithBackgroundFocus = ({ isOpen, setIsOpen }: any) => {
   return (
     <>
       {isOpen && (
-        <div className="overlay">
+        <div className="overlay bg-blue-100">
           <div className="dialog">
             <button className="close-dialog" onClick={closeDialog}>
               <Cross1Icon className="w-4 h-4" />
             </button>
             <Image
               src={"/images/warning-img.png"}
-              width={2000}
-              height={2000}
+              width={2500}
+              height={2500}
               style={{ width: "100%", height: "100%" }}
               alt="dialog"
             />
