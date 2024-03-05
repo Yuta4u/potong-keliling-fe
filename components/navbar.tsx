@@ -83,21 +83,13 @@ const MainNav = () => {
       `}
       style={{ color: "#777777" }}
     >
-      {/* <div>
-        <Image
-          src="/images/logo-navbar.png"
-          width={100}
-          height={200}
-          alt="logo navbar"
-        />
-      </div> */}
-      <ul className="flex space-x-6 capitalize pr-10 flex-row">
-        <li className=" fixed -left-60 top-0 ">
+      <ul className="relative flex space-x-6 capitalize pr-10 flex-row">
+        <li className="text-white fixed left-2" style={{ top: "1px" }}>
           <Image
             src={"/images/navbar-logo.png"}
             width={65}
             height={65}
-            alt=""
+            alt="this is logo image"
           />
         </li>
         {nav.map((e) => (

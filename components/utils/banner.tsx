@@ -28,7 +28,7 @@ const Banner = () => {
           spaceBetween={30}
           navigation={true}
           autoplay={{
-            delay: 10000,
+            delay: 1000000,
             disableOnInteraction: false,
           }}
           loop={true}
@@ -43,9 +43,9 @@ const Banner = () => {
             <SwiperSlide key={i}>
               <Image
                 src={`/images/slider-${e}.png`}
-                width={1000}
-                height={1000}
-                objectFit="cover"
+                width={100}
+                height={100}
+                objectFit="contain"
                 alt="banner"
               />
             </SwiperSlide>

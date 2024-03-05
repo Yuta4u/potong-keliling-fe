@@ -1,5 +1,6 @@
 // radix
 import { DrawingPinIcon } from "@radix-ui/react-icons"
+import Image from "next/image"
 
 // components
 import Footer from "./footer"
@@ -52,6 +53,9 @@ const Content = () => {
       {/*  KONTAK */}
       <div id="kontak" className="flex flex-column justify-center">
         <Footer />
+      </div>
+      <div className="text-center bg-[#FA6709] text-[#ededed] text-xs md:text-sm pb-2">
+        Copyright © 2024 All rights reserved | PT. Mister Cukur
       </div>
     </div>
   )
