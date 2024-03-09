@@ -104,20 +104,18 @@ function CalendarComp() {
           </div>
           <div className="h-40 mt-2 md:mt-0 mx-auto flex justify-between gap-2 p-0 md:p-2">
             <div className="w-1/3 flex flex-col justify-between">
-              <AlertDialogComp time={"08:00"} date={date} />
               <AlertDialogComp time={"09:00"} date={date} />
               <AlertDialogComp time={"10:00"} date={date} />
               <AlertDialogComp time={"11:00"} date={date} />
+              <AlertDialogComp time={"12:00"} date={date} />
             </div>
             <div className="w-1/3 flex flex-col justify-between">
-              <AlertDialogComp time={"12:00"} date={date} />
               <AlertDialogComp time={"13:00"} date={date} />
               <AlertDialogComp time={"14:00"} date={date} />
               <AlertDialogComp time={"15:00"} date={date} />
+              <AlertDialogComp time={"16:00"} date={date} />
             </div>
             <div className="w-1/3 flex flex-col justify-between">
-              <AlertDialogComp time={"16:00"} date={date} />
-              <AlertDialogComp time={"17:00"} date={date} />
               <AlertDialogComp time={"18:00"} date={date} />
               <AlertDialogComp time={"19:00"} date={date} />
             </div>

@@ -7,7 +7,7 @@ import dynamic from "next/dynamic"
 const Content = dynamic(() => import("./page"))
 
 export const metadata: Metadata = {
-  title: "Potong Kelilingr",
+  title: "Potong Keliling",
   description: "Mau ganteng? hubungin aja Potong Keliling..",
 }
 
