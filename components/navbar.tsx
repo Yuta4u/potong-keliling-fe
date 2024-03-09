@@ -86,9 +86,9 @@ const MainNav = () => {
       <ul className="relative flex space-x-6 capitalize pr-10 flex-row">
         <li className="text-white fixed left-2" style={{ top: "1px" }}>
           <Image
-            src={"/images/navbar-logo.png"}
-            width={65}
-            height={65}
+            src={"/images/logo-tentang-kami.png"}
+            width={60}
+            height={60}
             alt="this is logo image"
           />
         </li>

@@ -15,9 +15,9 @@ const DialogWithBackgroundFocus = ({ isOpen, setIsOpen }: any) => {
               <Cross1Icon className="w-6 h-6" />
             </button>
             <Image
-              src={"/images/warning-img.png"}
-              width={8000}
-              height={8000}
+              src={"/images/img-warn.png"}
+              width={500}
+              height={500}
               style={{ width: "100%", height: "100%" }}
               alt="dialog"
             />

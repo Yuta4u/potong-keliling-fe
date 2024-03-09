@@ -18,11 +18,11 @@ const WhatsappBtn = () => {
         size="4"
         color="grass"
         variant="solid"
-        className="w-40 hover:text-slate-700"
+        className="w-60 hover:text-slate-700"
         onClick={handleOnClickWhatsapp}
       >
-        <RocketIcon width="16" height="16" />
-        Whatsapp
+        <RocketIcon className="w-6 h-6" />
+        <span className="text-2xl"> Whatsapp</span>
       </Button>
     </div>
   )

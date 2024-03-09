@@ -33,7 +33,9 @@ const Layanan = () => {
             className="border-b-2 w-4/12 border-b-[#FA6709] border-dashed"
             style={{ marginBottom: "10px" }}
           ></div>
-          <div className=" w-2/12 text-center">15k</div>
+          <div className=" w-3/12 text-center ">
+            <span className="line-through mr-2">20k</span>15k
+          </div>
           <div></div>
         </div>
         <div className="mx-auto text-center w-10/12">

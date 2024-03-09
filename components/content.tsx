@@ -23,13 +23,20 @@ const Content = () => {
         style={{ alignItems: "center" }}
       >
         <div className="text-center text-sm  md:text-3xl font-semibold">
-          INGIN BUAT JANJI DENGAN
+          INGIN BUAT JANJI DENGAN{" "}
+          <span className="text-[#FA6709]">POLING?</span>
+        </div>
+        <div className="text-center md:text-sm font-semibold mt-2">
+          JANJIAN YUK!
           <br />
-          <span className="text-[#FA6709]">MISTER CUKUR</span> ?
+          Booking <span className="text-[#FA6709]"> Potong Keliling </span>{" "}
+          Disini
         </div>
         <div className="text-center mt-3 flex justify-center flex-col">
           <PopoverButton content={<CalendarComp />} />
-          <div className="text-sm  md:text-lg ">or</div>
+          <div className="text-sm  md:text-lg text-[#FA6709] font-semibold">
+            or
+          </div>
           <WhatsappBtn />
         </div>
       </div>

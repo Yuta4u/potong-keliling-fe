@@ -42,9 +42,9 @@ const Banner = () => {
           {banner?.map((e: number, i: number) => (
             <SwiperSlide key={i}>
               <Image
-                src={`/images/slider-${e}.png`}
-                width={2000}
-                height={2000}
+                src={`/images/img-slider-${e}.png`}
+                width={1000}
+                height={1000}
                 objectFit="contain"
                 alt="banner"
               />
