@@ -7,8 +7,8 @@ import dynamic from "next/dynamic"
 const Content = dynamic(() => import("./page"))
 
 export const metadata: Metadata = {
-  title: "Mister Cukur",
-  description: "Mau ganteng? mampir ke mister cukur..",
+  title: "Potong Kelilingr",
+  description: "Mau ganteng? hubungin aja Potong Keliling..",
 }
 
 export default function RootLayout({
