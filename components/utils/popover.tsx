@@ -16,7 +16,7 @@ function PopoverButton({ content }: any) {
         <Button
           size={"4"}
           variant="solid"
-          className="w-60 bg-[#FA6709] text-[#ededed] hover:text-slate-600"
+          className="w-60  text-[#ededed] hover:text-slate-600 bg-[#FA6709]"
         >
           <CalendarIcon className="w-6 h-6" />
           <span className="text-2xl">Booking</span>

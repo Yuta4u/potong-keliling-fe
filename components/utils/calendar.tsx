@@ -6,7 +6,7 @@ import "react-calendar/dist/Calendar.css"
 import { AlertDialog, Button, Flex } from "@radix-ui/themes"
 
 // handle calendar action
-const AlertDialogComp = ({ time, date }: any) => {
+const AlertDialogComp = ({ time, date, disabled }: any) => {
   const handleTimeSelect = () => {
     const month: any = {
       Jan: "Januari",
@@ -25,7 +25,7 @@ const AlertDialogComp = ({ time, date }: any) => {
 
     const tgl = date.toString().split(" ")[2]
     const bln = date.toString().split(" ")[1]
-    const msg = `Halo Mister Cukur, apakah untuk tanggal ${+tgl} ${
+    const msg = `Halo Potong Keliling, apakah untuk tanggal ${+tgl} ${
       month[bln]
     }, jam ${time} tersedia?`
     const phoneNumber = "6281292383814" // Ganti dengan nomor yang diinginkan
@@ -41,13 +41,18 @@ const AlertDialogComp = ({ time, date }: any) => {
   return (
     <AlertDialog.Root>
       <AlertDialog.Trigger>
-        <Button className="btn-jam">{time}</Button>
+        <Button
+          disabled={disabled}
+          className={`btn-jam ${!disabled ? "bg-[#FA6709]" : "bg-[#ededed]"} `}
+        >
+          {time}
+        </Button>
       </AlertDialog.Trigger>
       <AlertDialog.Content style={{ maxWidth: 450 }}>
         <AlertDialog.Title>Buat Janji?</AlertDialog.Title>
         <AlertDialog.Description size="2">
           Apakah kamu yakin ingin buat janji dengan{" "}
-          <span className="text-[#FA6709]">Mister Cukur</span>?
+          <span className="text-[#FA6709]">Potong Keliling</span>?
         </AlertDialog.Description>
 
         <Flex gap="3" mt="4" justify="end">
@@ -70,6 +75,18 @@ const AlertDialogComp = ({ time, date }: any) => {
 function CalendarComp() {
   const [date, setDate] = useState(new Date())
   const [showTimePicker, setShowTimePicker] = useState(false)
+  const [avaible, setAvaible] = useState([])
+  useEffect(() => {
+    const getJam = async () => {
+      const res = await fetch("http://localhost:8080/v1/jam")
+      const jam = await res.json()
+      const data = jam?.data.filter((e: any) => e.aktif).map((e) => e.jam)
+      setAvaible(data)
+    }
+    if (avaible.length === 0) {
+      getJam()
+    }
+  }, [])
 
   // handle today
   const tempToday = new Date()
@@ -79,6 +96,10 @@ function CalendarComp() {
   const handleDateChange = (date: any) => {
     setDate(date)
     setShowTimePicker(true) // Menampilkan pop-over jam saat tanggal diubah
+  }
+
+  const handleIsAvaible = (jam: any) => {
+    return !avaible?.includes(jam)
   }
 
   return (
@@ -104,20 +125,62 @@ function CalendarComp() {
           </div>
           <div className="h-40 mt-2 md:mt-0 mx-auto flex justify-between gap-2 p-0 md:p-2">
             <div className="w-1/3 flex flex-col justify-between">
-              <AlertDialogComp time={"09:00"} date={date} />
-              <AlertDialogComp time={"10:00"} date={date} />
-              <AlertDialogComp time={"11:00"} date={date} />
-              <AlertDialogComp time={"12:00"} date={date} />
+              <AlertDialogComp
+                time={"09:00"}
+                date={date}
+                disabled={handleIsAvaible("09:00")}
+              />
+              <AlertDialogComp
+                time={"10:00"}
+                date={date}
+                disabled={handleIsAvaible("10:00")}
+              />
+              <AlertDialogComp
+                time={"11:00"}
+                date={date}
+                disabled={handleIsAvaible("11:00")}
+              />
+              <AlertDialogComp
+                time={"12:00"}
+                date={date}
+                disabled={handleIsAvaible("12:00")}
+              />
             </div>
             <div className="w-1/3 flex flex-col justify-between">
-              <AlertDialogComp time={"13:00"} date={date} />
-              <AlertDialogComp time={"14:00"} date={date} />
-              <AlertDialogComp time={"15:00"} date={date} />
-              <AlertDialogComp time={"16:00"} date={date} />
+              <AlertDialogComp
+                time={"13:00"}
+                date={date}
+                disabled={handleIsAvaible("13:00")}
+              />
+              <AlertDialogComp
+                time={"14:00"}
+                date={date}
+                disabled={handleIsAvaible("14:00")}
+              />
+              <AlertDialogComp
+                time={"15:00"}
+                date={date}
+                disabled={handleIsAvaible("15:00")}
+              />
+              <AlertDialogComp
+                time={"16:00"}
+                date={date}
+                disabled={handleIsAvaible("16:00")}
+              />
             </div>
-            <div className="w-1/3 flex flex-col justify-between">
-              <AlertDialogComp time={"18:00"} date={date} />
-              <AlertDialogComp time={"19:00"} date={date} />
+            <div className="w-1/3 flex flex-col justify-between ">
+              <AlertDialogComp
+                time={"17:00"}
+                date={date}
+                disabled={handleIsAvaible("17:00")}
+              />
+              <AlertDialogComp
+                time={"18:00"}
+                date={date}
+                disabled={handleIsAvaible("18:00")}
+              />
+              <AlertDialogComp time={"19:00"} date={date} disabled={true} />
+              <AlertDialogComp time={"20:00"} date={date} disabled={true} />
             </div>
           </div>
         </div>

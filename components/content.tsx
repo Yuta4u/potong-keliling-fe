@@ -62,7 +62,7 @@ const Content = () => {
         <Footer />
       </div>
       <div className="text-center bg-[#FA6709] text-[#ededed] text-xs md:text-sm pb-2">
-        Copyright © 2024 All rights reserved | PT. Mister Cukur
+        Copyright © 2024 All rights reserved | PT. Potong Keliling
       </div>
     </div>
   )
