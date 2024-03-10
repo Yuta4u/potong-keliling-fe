@@ -2,10 +2,10 @@
 
 const Footer = () => {
   return (
-    <div className="flex flex-col w-full justify-center text-center bg-[#FA6709] text-[#ededed] py-5">
+    <div className="flex flex-col w-full justify-center text-center bg-[#FA6709] text-[#ededed] py-5 poppins">
       <div className="font-bold text-2xl mt-3">Punya Pertanyaan?</div>
 
-      <div className="flex flex-col w-4/5 mx-auto text-[#ededed]">
+      <div className="flex flex-col w-4/5 mx-auto text-[#ededed] my-7">
         {/* WHATSAPP  */}
         <div className="w-full mt-5 md:mt-0">
           <div className="ml-14 text-left text-sm md:mb-0 -mb-5 w-fit">

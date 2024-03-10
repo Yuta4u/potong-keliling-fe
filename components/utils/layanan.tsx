@@ -7,13 +7,17 @@ const Layanan = () => {
   return (
     <div
       id="layanan"
-      className="w-full py-0 pb-20 md:py-20 "
+      className="w-full py-0 pb-20 md:py-20 poppins"
       style={{ height: "600px" }}
     >
-      <div className="text-center text-2xl md:text-4xl font-bold text-[#FA6709]">
+      <div className="text-center text-4xl font-bold text-[#FA6709]">
         Layanan Kami
       </div>
       <div className="flex text-center  justify-center mt-2">
+        <ScissorsIcon className="w-4 md:w-6 h-4 md:h-6" />
+        <ScissorsIcon className="w-4 md:w-6 h-4 md:h-6" />
+        <ScissorsIcon className="w-4 md:w-6 h-4 md:h-6" />
+        <ScissorsIcon className="w-4 md:w-6 h-4 md:h-6" />
         <ScissorsIcon className="w-4 md:w-6 h-4 md:h-6" />
         <ScissorsIcon className="w-4 md:w-6 h-4 md:h-6" />
         <ScissorsIcon className="w-4 md:w-6 h-4 md:h-6" />
@@ -58,10 +62,10 @@ const Layanan = () => {
             </span>
           </div>
         </div>
-        <div className="mx-auto text-center w-10/12">
+        <div className="mx-auto text-sm sm:text-base text-center w-10/12">
           Cukur rambut tanpa keramas untuk semua tipe rambut yang diinginkan.
         </div>
-        <div className="text-center text-lg md:text-2xl font-bold text-[#FA6709] mt-5 mb-5">
+        <div className="text-center text-2xl md:text-2xl font-bold text-[#FA6709] mt-5 mb-5">
           Layanan Tambahan
           <br />
           (Add on)

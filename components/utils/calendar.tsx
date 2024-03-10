@@ -43,7 +43,7 @@ const AlertDialogComp = ({ time, date, disabled, remove }: any) => {
       <AlertDialog.Trigger>
         <Button
           disabled={disabled}
-          className={`btn-jam ${
+          className={`btn-jam poppins ${
             remove ? "bg-white" : disabled ? "bg-[#ededed]" : "bg-[#FA6709]"
           }`}
         >
@@ -52,8 +52,8 @@ const AlertDialogComp = ({ time, date, disabled, remove }: any) => {
       </AlertDialog.Trigger>
       <AlertDialog.Content style={{ maxWidth: 450 }}>
         <AlertDialog.Title>Buat Janji?</AlertDialog.Title>
-        <AlertDialog.Description size="2">
-          Apakah kamu yakin ingin buat janji dengan{" "}
+        <AlertDialog.Description size="2" className="poppins">
+          Apakah kamu yakin ingin buat janji dengan
           <span className="text-[#FA6709]">Potong Keliling</span>?
         </AlertDialog.Description>
 
@@ -107,7 +107,7 @@ function CalendarComp() {
   }
 
   return (
-    <div className="flex">
+    <div className="flex poppins">
       <Calendar
         className={"z-50"}
         onChange={handleDateChange}

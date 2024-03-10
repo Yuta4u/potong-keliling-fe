@@ -22,11 +22,11 @@ const Content = () => {
         className="content-1 mb-32 md:mb-0 bg-[#ededed] text-black flex flex-col justify-center py-20"
         style={{ alignItems: "center" }}
       >
-        <div className="text-center text-sm  md:text-3xl font-semibold">
+        <div className="text-center text-base  md:text-3xl font-semibold poppins">
           INGIN BUAT JANJI DENGAN{" "}
           <span className="text-[#FA6709]">POLING?</span>
         </div>
-        <div className="text-center md:text-sm font-semibold mt-2">
+        <div className="text-center text-xs md:text-sm font-semibold mt-2 poppins">
           JANJIAN YUK!
           <br />
           Booking <span className="text-[#FA6709]"> Potong Keliling </span>{" "}
@@ -47,7 +47,7 @@ const Content = () => {
       {/*  TESTIMONI */}
       <div id="testimoni" className=" bg-[#ededed] text-black py-20 ">
         <div className="w-full flex justify-center">
-          <div className="w-11/12 text-sm md:text-2xl flex items-center mb-3 font-semibold">
+          <div className="w-11/12 text-sm md:text-2xl flex items-center mb-3 font-semibold poppins">
             Testimoni <DrawingPinIcon className="ml-2 h-4 w-4 md:h-6 md:w-6" />
           </div>
         </div>
@@ -61,7 +61,7 @@ const Content = () => {
       <div id="kontak" className="flex flex-column justify-center">
         <Footer />
       </div>
-      <div className="text-center bg-[#FA6709] text-[#ededed] text-xs md:text-sm pb-2">
+      <div className="text-center bg-[#FA6709] text-[#ededed] text-xs pb-2 poppins">
         Copyright © 2024 All rights reserved | PT. Potong Keliling
       </div>
     </div>

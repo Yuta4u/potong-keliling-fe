@@ -18,8 +18,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
-        className="bg-late-50"
+        className="bg-late-50 poppins"
         style={{
           height: "1200px",
         }}
