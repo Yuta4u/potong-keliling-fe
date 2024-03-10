@@ -59,7 +59,13 @@ const Slider = () => {
       >
         {testimoniData?.map((e, i) => (
           <SwiperSlide key={i} className="swiper-slide-testimoni">
-            <Image src={`/images/${e}`} width={500} height={500} alt="" />
+            <Image
+              src={`/images/${e}`}
+              width={500}
+              height={500}
+              alt=""
+              className="slider-img"
+            />
           </SwiperSlide>
         ))}
       </Swiper>

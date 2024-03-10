@@ -1,4 +1,4 @@
-.swiper {
+.container-swiper {
   width: 100% !important;
   height: 100% !important;
 }
@@ -13,11 +13,29 @@
   align-items: center !important;
 }
 
-.swiper-slide img {
+.banner-img {
   /* display: block !important; */
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
+}
+
+.slider-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+@media (max-width: 768px) {
+  .banner-img {
+    object-fit: contain !important;
+  }
+  .container-swiper {
+    height: auto !important;
+  }
+  .swiper-slide {
+    height: auto;
+  }
 }
 
 .swiper {

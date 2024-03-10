@@ -37,16 +37,17 @@ const Banner = () => {
           }}
           modules={[Pagination, Autoplay, Navigation]}
           onAutoplayTimeLeft={onAutoplayTimeLeft}
-          className="mySwiper"
+          className="container-swiper"
         >
           {banner?.map((e: number, i: number) => (
             <SwiperSlide key={i}>
               <Image
                 src={`/images/img-slider-${e}.png`}
-                width={2000}
-                height={2000}
+                width={1000}
+                height={1000}
                 objectFit="contain"
                 alt="banner"
+                className="banner-img"
               />
             </SwiperSlide>
           ))}

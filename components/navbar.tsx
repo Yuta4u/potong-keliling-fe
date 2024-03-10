@@ -89,7 +89,8 @@ const MainNav = () => {
             src={"/images/logo-tentang-kami.png"}
             width={60}
             height={60}
-            alt="this is logo image"
+            alt="logo navbar"
+            className="rounded-full"
           />
         </li>
         {nav.map((e) => (
