@@ -78,7 +78,7 @@ function CalendarComp() {
   const [avaible, setAvaible] = useState([])
   useEffect(() => {
     const getJam = async () => {
-      const res = await fetch("http://localhost:8080/v1/jam")
+      const res = await fetch("https://potong-keliling-api.vercel.app/v1/jam")
       const jam = await res.json()
       const data = jam?.data
         .filter((e: any) => e.aktif)
