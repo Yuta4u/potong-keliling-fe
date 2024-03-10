@@ -47,7 +47,15 @@ const Banner = () => {
                 height={500}
                 objectFit="contain"
                 alt="banner"
-                className="banner-img"
+                className="banner-img block sm:hidden"
+              />
+              <Image
+                src={`/images/img-slider-${e}.png`}
+                width={2000}
+                height={2000}
+                objectFit="contain"
+                alt="banner"
+                className="banner-img hidden sm:block"
               />
             </SwiperSlide>
           ))}
