@@ -181,8 +181,18 @@ function CalendarComp() {
                 date={date}
                 disabled={handleIsAvaible("18:00", avaible)}
               />
-              <AlertDialogComp time={"19:00"} date={date} disabled={true} />
-              <AlertDialogComp time={"20:00"} date={date} disabled={true} />
+              <AlertDialogComp
+                time={"19:00"}
+                date={date}
+                disabled={true}
+                remove={true}
+              />
+              <AlertDialogComp
+                time={"20:00"}
+                date={date}
+                disabled={true}
+                remove={true}
+              />
             </div>
           </div>
         </div>

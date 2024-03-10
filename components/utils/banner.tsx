@@ -69,6 +69,20 @@ const Banner = () => {
                 alt="banner"
                 className="banner-img hidden sm:hidden md:hidden lg:block"
               />
+              <Image
+                src={`/images/img-slider-${e}.png`}
+                width={3000}
+                height={3000}
+                alt="banner"
+                className="banner-img hidden sm:hidden md:hidden lg:hidden min-[2000px]:block"
+              />
+              {/* <Image
+                src={`/images/img-slider-${e}.png`}
+                width={10000}
+                height={10000}
+                alt="banner"
+                className="banner-img hidden sm:hidden md:hidden lg:hidden min-[2000px]:block"
+              /> */}
             </SwiperSlide>
           ))}
         </Swiper>
