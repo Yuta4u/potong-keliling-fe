@@ -43,8 +43,8 @@ const Banner = () => {
             <SwiperSlide key={i}>
               <Image
                 src={`/images/img-slider-${e}.png`}
-                width={2000}
-                height={2000}
+                width={500}
+                height={500}
                 objectFit="contain"
                 alt="banner"
                 className="banner-img"
