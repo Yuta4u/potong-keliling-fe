@@ -1,4 +1,5 @@
 import { ScissorsIcon } from "@radix-ui/react-icons"
+import Image from "next/image"
 
 const Layanan = () => {
   const str = ["Cukur Kumis", "Cukur Jenggot"]
@@ -27,16 +28,35 @@ const Layanan = () => {
         <ScissorsIcon className="w-4 md:w-6 h-4 md:h-6" />
       </div>
       <div className=" h-72 mt-5">
-        <div className="flex text-[#FA6709]  w-10/12 md:w-3/12 mx-auto">
-          <div className=" w-6/12">Cukur rambut all type</div>
+        <div
+          className="flex text-[#FA6709]  w-10/12 md:w-4/12 mx-auto"
+          style={{ alignItems: "center" }}
+        >
+          <div className=" w-6/12 bg=blue-100">Cukur rambut all type</div>
+          <div className="border-b-2 w-4/12 border-b-[#FA6709] border-dashed bg-green-100"></div>
           <div
-            className="border-b-2 w-4/12 border-b-[#FA6709] border-dashed"
-            style={{ marginBottom: "10px" }}
-          ></div>
-          <div className=" w-3/12 text-center text-xl">
-            <span className="line-through mr-2 ml-2">20k</span>15k
+            className=" w-3/12 text-center flex"
+            style={{ alignItems: "center" }}
+          >
+            <span className="line-through mr-2 ml-2 text-base">20k</span>
+            <span>
+              <Image
+                src={"/images/15k_2.png"}
+                width={70}
+                height={70}
+                alt="price-tag"
+                className="hidden sm:block"
+              />
+
+              <Image
+                src={"/images/15k_2.png"}
+                width={100}
+                height={100}
+                alt="price-tag"
+                className="block sm:hidden"
+              />
+            </span>
           </div>
-          <div></div>
         </div>
         <div className="mx-auto text-center w-10/12">
           Cukur rambut tanpa keramas untuk semua tipe rambut yang diinginkan.
