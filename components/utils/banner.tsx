@@ -45,17 +45,29 @@ const Banner = () => {
                 src={`/images/img-slider-${e}.png`}
                 width={500}
                 height={500}
-                objectFit="contain"
                 alt="banner"
                 className="banner-img block sm:hidden"
               />
               <Image
                 src={`/images/img-slider-${e}.png`}
+                width={800}
+                height={800}
+                alt="banner"
+                className="banner-img hidden sm:block md:hidden lg:hidden"
+              />
+              <Image
+                src={`/images/img-slider-${e}.png`}
+                width={1000}
+                height={1000}
+                alt="banner"
+                className="banner-img hidden sm:hidden md:block lg:hidden"
+              />
+              <Image
+                src={`/images/img-slider-${e}.png`}
                 width={2000}
                 height={2000}
-                objectFit="contain"
                 alt="banner"
-                className="banner-img hidden sm:block"
+                className="banner-img hidden sm:hidden md:hidden lg:block"
               />
             </SwiperSlide>
           ))}
