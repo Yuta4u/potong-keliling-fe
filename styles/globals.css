@@ -310,14 +310,15 @@ abbr[title] {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   position: fixed;
-  top: 20;
-  left: -250px;
-  transition: left 0.3s ease;
+  top: 70px;
+  right: -250px;
+  transition: right 0.3s ease;
   border-radius: 15px;
 }
 
 .open {
-  left: 5px;
+  right: 5px;
+  top: 70px;
 }
 
 /* dialog  */

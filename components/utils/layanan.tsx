@@ -1,7 +1,7 @@
 import { ScissorsIcon } from "@radix-ui/react-icons"
 
 const Layanan = () => {
-  const str = ["Cukur Kumis", "Cukur Jenggot", "Pengaplikasikan Hair Tonic"]
+  const str = ["Cukur Kumis", "Cukur Jenggot"]
 
   return (
     <div
@@ -33,8 +33,8 @@ const Layanan = () => {
             className="border-b-2 w-4/12 border-b-[#FA6709] border-dashed"
             style={{ marginBottom: "10px" }}
           ></div>
-          <div className=" w-3/12 text-center ">
-            <span className="line-through mr-2">20k</span>15k
+          <div className=" w-3/12 text-center text-xl">
+            <span className="line-through mr-2 ml-2">20k</span>15k
           </div>
           <div></div>
         </div>

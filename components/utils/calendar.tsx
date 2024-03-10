@@ -6,7 +6,7 @@ import "react-calendar/dist/Calendar.css"
 import { AlertDialog, Button, Flex } from "@radix-ui/themes"
 
 // handle calendar action
-const AlertDialogComp = ({ time, date, disabled }: any) => {
+const AlertDialogComp = ({ time, date, disabled, remove }: any) => {
   const handleTimeSelect = () => {
     const month: any = {
       Jan: "Januari",
@@ -43,7 +43,9 @@ const AlertDialogComp = ({ time, date, disabled }: any) => {
       <AlertDialog.Trigger>
         <Button
           disabled={disabled}
-          className={`btn-jam ${!disabled ? "bg-[#FA6709]" : "bg-[#ededed]"} `}
+          className={`btn-jam ${
+            remove ? "bg-white" : disabled ? "bg-[#ededed]" : "bg-[#FA6709]"
+          }`}
         >
           {time}
         </Button>
