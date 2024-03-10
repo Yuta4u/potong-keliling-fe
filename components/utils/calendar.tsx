@@ -80,7 +80,9 @@ function CalendarComp() {
     const getJam = async () => {
       const res = await fetch("http://localhost:8080/v1/jam")
       const jam = await res.json()
-      const data = jam?.data.filter((e: any) => e.aktif).map((e) => e.jam)
+      const data = jam?.data
+        .filter((e: any) => e.aktif)
+        .map((e: { jam: string; aktif: number }) => e.jam)
       setAvaible(data)
     }
     if (avaible.length === 0) {
@@ -98,7 +100,7 @@ function CalendarComp() {
     setShowTimePicker(true) // Menampilkan pop-over jam saat tanggal diubah
   }
 
-  const handleIsAvaible = (jam: any) => {
+  const handleIsAvaible = (jam: string) => {
     return !avaible?.includes(jam)
   }
 
