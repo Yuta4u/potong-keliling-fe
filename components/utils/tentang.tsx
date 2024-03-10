@@ -2,13 +2,13 @@ import Image from "next/image"
 
 const Tentang = () => {
   return (
-    <div id="tentang" className="w-full py-0 pb-20 mt-20 md:py-10 ">
+    <div id="tentang" className="w-full py-0 pb-20 mt-20 md:py-20 ">
       <Image
         src={"/images/logo-tentang-kami.png"}
         width={200}
         height={200}
         alt="logo-text"
-        className="mx-auto mb-6"
+        className="mx-auto mb-6 rounded-xl"
       />
       <div className="w-full md:w-3/5 mx-auto text-[10px] md:text-lg font-semibold text-center">
         <span className="text-[#FA6709]">POLING</span> atau{" "}
@@ -20,7 +20,7 @@ const Tentang = () => {
           POLING
         </span>{" "}
         hadir untuk menjadi solusi bagi kalian yang <br /> memiliki waktu
-        terbatas dan mageran, Klik pesan dan kami siap <br />
+        terbatas dan mageran, Klik pesan dan kami siap datang <br />
       </div>
     </div>
   )
