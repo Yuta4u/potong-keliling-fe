@@ -100,7 +100,7 @@ function CalendarComp() {
     setShowTimePicker(true) // Menampilkan pop-over jam saat tanggal diubah
   }
 
-  const handleIsAvaible = (jam: string) => {
+  const handleIsAvaible = (jam: any, avaible: any[]): boolean => {
     return !avaible?.includes(jam)
   }
 
@@ -130,56 +130,56 @@ function CalendarComp() {
               <AlertDialogComp
                 time={"09:00"}
                 date={date}
-                disabled={handleIsAvaible("09:00")}
+                disabled={handleIsAvaible("09:00", avaible)}
               />
               <AlertDialogComp
                 time={"10:00"}
                 date={date}
-                disabled={handleIsAvaible("10:00")}
+                disabled={handleIsAvaible("10:00", avaible)}
               />
               <AlertDialogComp
                 time={"11:00"}
                 date={date}
-                disabled={handleIsAvaible("11:00")}
+                disabled={handleIsAvaible("11:00", avaible)}
               />
               <AlertDialogComp
                 time={"12:00"}
                 date={date}
-                disabled={handleIsAvaible("12:00")}
+                disabled={handleIsAvaible("12:00", avaible)}
               />
             </div>
             <div className="w-1/3 flex flex-col justify-between">
               <AlertDialogComp
                 time={"13:00"}
                 date={date}
-                disabled={handleIsAvaible("13:00")}
+                disabled={handleIsAvaible("13:00", avaible)}
               />
               <AlertDialogComp
                 time={"14:00"}
                 date={date}
-                disabled={handleIsAvaible("14:00")}
+                disabled={handleIsAvaible("14:00", avaible)}
               />
               <AlertDialogComp
                 time={"15:00"}
                 date={date}
-                disabled={handleIsAvaible("15:00")}
+                disabled={handleIsAvaible("15:00", avaible)}
               />
               <AlertDialogComp
                 time={"16:00"}
                 date={date}
-                disabled={handleIsAvaible("16:00")}
+                disabled={handleIsAvaible("16:00", avaible)}
               />
             </div>
             <div className="w-1/3 flex flex-col justify-between ">
               <AlertDialogComp
                 time={"17:00"}
                 date={date}
-                disabled={handleIsAvaible("17:00")}
+                disabled={handleIsAvaible("17:00", avaible)}
               />
               <AlertDialogComp
                 time={"18:00"}
                 date={date}
-                disabled={handleIsAvaible("18:00")}
+                disabled={handleIsAvaible("18:00", avaible)}
               />
               <AlertDialogComp time={"19:00"} date={date} disabled={true} />
               <AlertDialogComp time={"20:00"} date={date} disabled={true} />
