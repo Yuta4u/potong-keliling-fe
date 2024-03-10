@@ -84,11 +84,11 @@ const MainNav = () => {
       style={{ color: "#777777" }}
     >
       <ul className="relative flex space-x-6 capitalize pr-10 flex-row">
-        <li className="text-white fixed left-2" style={{ top: "1px" }}>
+        <li className="text-white fixed left-2" style={{ top: "6px" }}>
           <Image
             src={"/images/logo-tentang-kami.png"}
-            width={60}
-            height={60}
+            width={50}
+            height={50}
             alt="logo navbar"
             className="rounded-full"
           />
