@@ -1,10 +1,10 @@
 // radix
 import { DrawingPinIcon } from "@radix-ui/react-icons"
-import Image from "next/image"
 
 // components
 import Footer from "./footer"
 import Slider from "./utils/slider"
+import Testimoni from "./utils/testimoni"
 import Tentang from "./utils/tentang"
 import Layanan from "./utils/layanan"
 import PopoverButton from "./utils/popover"
@@ -15,7 +15,9 @@ const Content = () => {
   return (
     <div>
       {/* TENTANG  */}
-      <Tentang />
+      <div id="tentang" className="py-20">
+        <Tentang />
+      </div>
 
       {/* BUAT JANJI  */}
       <div
@@ -42,13 +44,15 @@ const Content = () => {
       </div>
 
       {/* LAYANAN */}
-      <Layanan />
+      <div id="layanan" className="pt-20">
+        <Layanan />
+      </div>
 
-      {/*  TESTIMONI */}
-      <div id="testimoni" className=" bg-[#ededed] text-black py-20 ">
+      {/*  MODEL */}
+      <div id="model" className=" bg-[#ededed] text-black py-20 ">
         <div className="w-full flex justify-center">
           <div className="w-11/12 text-sm md:text-2xl flex items-center mb-3 font-semibold poppins">
-            Testimoni <DrawingPinIcon className="ml-2 h-4 w-4 md:h-6 md:w-6" />
+            Model <DrawingPinIcon className="ml-2 h-4 w-4 md:h-6 md:w-6" />
           </div>
         </div>
         <div className="w-full flex justify-center">
@@ -57,12 +61,23 @@ const Content = () => {
           </div>
         </div>
       </div>
+
+      {/* TESTIMONI  */}
+      <div id="testimoni" className="pt-20">
+        <div className="text-sm md:text-2xl flex font-semibold poppins justify-center underline-offset-2 underline">
+          Testimoni
+        </div>
+        <Testimoni />
+      </div>
+
       {/*  KONTAK */}
       <div id="kontak" className="flex flex-column justify-center">
         <Footer />
       </div>
+
+      {/* FOOTER  */}
       <div className="text-center bg-[#FA6709] text-[#ededed] text-xs pb-2 poppins">
-        Copyright © 2024 All rights reserved | PT. Potong Keliling
+        Copyright © 2024 All rights reserved | PT. Potong Keliling Indonesia
       </div>
     </div>
   )

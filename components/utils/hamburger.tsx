@@ -2,7 +2,6 @@
 
 import { Sling as Hamburger } from "hamburger-react"
 import { useState } from "react"
-import Image from "next/image"
 
 const HamburgerMenu = () => {
   const [isOpen, setOpen] = useState(false)
@@ -19,7 +18,10 @@ const HamburgerMenu = () => {
       link: "Layanan",
       href: "layanan",
     },
-
+    {
+      link: "Model",
+      href: "model",
+    },
     {
       link: "Testimoni",
       href: "testimoni",
@@ -41,15 +43,16 @@ const HamburgerMenu = () => {
   return (
     <div
       className="z-50 fixed  bg-slate-400 w-full text-gray-100 p-2 flex justify-between"
-      style={{ background: "rgba(0,0,0,0.7)" }}
+      style={{ background: "rgba(0,0,0,0.7)", height: "50px" }}
     >
       <div>
-        <Image
-          src={"/images/logo-tentang-kami.png"}
-          width={50}
-          height={50}
+        <img
+          src={
+            "https://utfs.io/f/ab005ddc-5c8f-4f4e-81b9-388506da8517-17k672.png"
+          }
           alt="logo navbar"
           className="rounded-full"
+          style={{ width: "30px", height: "30px" }}
         />
       </div>
       <div className="flex align-middle mr-3" style={{ alignItems: "center" }}>

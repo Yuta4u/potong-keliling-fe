@@ -20,12 +20,6 @@
   object-fit: cover !important;
 }
 
-.slider-img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-}
-
 @media (max-width: 768px) {
   .banner-img {
     object-fit: contain !important;

@@ -11,15 +11,16 @@ import "../../styles/banner.css"
 // import required modules
 import { Pagination, Autoplay, Navigation } from "swiper/modules"
 
-import Image from "next/image"
-
 const Banner = () => {
   const progressCircle: any = useRef(null)
   const onAutoplayTimeLeft = (s: any, time: any, progress: any) => {
     progressCircle.current?.style.setProperty("--progress", 1 - progress)
   }
 
-  const banner = [1, 2]
+  const banner = [
+    "https://utfs.io/f/0174de66-8080-4912-8d91-28f5895d7ce7-s17z75.png",
+    "https://utfs.io/f/87886cc1-01ab-4809-a815-3ba5ea4f92d6-s17z74.png",
+  ]
   return (
     <div id="beranda" className="flex justify-center">
       <div className="w-full">
@@ -31,7 +32,7 @@ const Banner = () => {
             delay: 10000,
             disableOnInteraction: false,
           }}
-          loop={true}
+          // loop={true}
           pagination={{
             clickable: true,
           }}
@@ -39,35 +40,31 @@ const Banner = () => {
           onAutoplayTimeLeft={onAutoplayTimeLeft}
           className="container-swiper"
         >
-          {banner?.map((e: number, i: number) => (
+          {banner?.map((e: string, i: number) => (
             <SwiperSlide key={i}>
-              <Image
-                src={`/images/img-slider-${e}.png`}
-                width={500}
-                height={500}
+              <img
+                src={e}
                 alt="banner"
                 className="banner-img block sm:hidden"
+                style={{ width: "100%", height: "300px" }}
               />
-              <Image
-                src={`/images/img-slider-${e}.png`}
-                width={800}
-                height={800}
+              <img
+                src={e}
                 alt="banner"
                 className="banner-img hidden sm:block md:hidden lg:hidden"
+                style={{ width: "100%", height: "400px" }}
               />
-              <Image
-                src={`/images/img-slider-${e}.png`}
-                width={1000}
-                height={1000}
+              <img
+                src={e}
                 alt="banner"
                 className="banner-img hidden sm:hidden md:block lg:hidden"
+                style={{ width: "100%", height: "100vh" }}
               />
-              <Image
-                src={`/images/img-slider-${e}.png`}
-                width={3000}
-                height={3000}
+              <img
+                src={e}
                 alt="banner"
                 className="banner-img hidden sm:hidden md:hidden lg:block"
+                style={{ width: "100%", height: "100vh" }}
               />
             </SwiperSlide>
           ))}

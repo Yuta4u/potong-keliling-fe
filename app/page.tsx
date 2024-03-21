@@ -30,6 +30,7 @@ export default function Home() {
     <main>
       <Dialog isOpen={isOpen} setIsOpen={setIsOpen} />
       {isMobile ? <HamburgerMenu /> : <MainNavbar />}
+      {isMobile && <div style={{ background: "white", height: "50px" }} />}
       <Banner />
       <Content />
     </main>

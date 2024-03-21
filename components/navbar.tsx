@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import Image from "next/image"
 
 const MainNav = () => {
   const isMobile = typeof window !== "undefined" && window.innerWidth <= 767.98
@@ -65,7 +64,10 @@ const MainNav = () => {
       link: "Layanan",
       href: "layanan",
     },
-
+    {
+      link: "Model",
+      href: "model",
+    },
     {
       link: "Testimoni",
       href: "testimoni",
@@ -85,12 +87,13 @@ const MainNav = () => {
     >
       <ul className="relative flex space-x-6 capitalize pr-10 flex-row">
         <li className="text-white fixed left-2" style={{ top: "6px" }}>
-          <Image
-            src={"/images/logo-tentang-kami.png"}
-            width={50}
-            height={50}
+          <img
+            src={
+              "https://utfs.io/f/ab005ddc-5c8f-4f4e-81b9-388506da8517-17k672.png"
+            }
             alt="logo navbar"
             className="rounded-full"
+            style={{ width: "50px", height: "50px" }}
           />
         </li>
         {nav.map((e) => (
