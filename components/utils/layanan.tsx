@@ -56,7 +56,7 @@ const Layanan = () => {
 
               <img
                 src={
-                  "https://utfs.io/f/e20ccd7b-5bf8-45f6-b979-6b8bfb2bd173-l05w70.png"
+                  "https://utfs.io/f/08dcbbcc-941e-47b7-ba5e-ad9aae05acca-1355.png"
                 }
                 width={100}
                 height={100}
