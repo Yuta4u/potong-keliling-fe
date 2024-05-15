@@ -40,12 +40,12 @@ const Layanan = () => {
             style={{ alignItems: "center" }}
           >
             <span className="line-through mr-2 ml-2 text-base md:text-2xl font-bold">
-              25k
+              40k
             </span>
             <span>
               <img
                 src={
-                  "https://utfs.io/f/e20ccd7b-5bf8-45f6-b979-6b8bfb2bd173-l05w70.png"
+                  "https://utfs.io/f/08dcbbcc-941e-47b7-ba5e-ad9aae05acca-1355.png"
                 }
                 width={70}
                 height={70}
